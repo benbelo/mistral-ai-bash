@@ -26,6 +26,4 @@ OUTPUT=$(curl -s --location "https://api.mistral.ai/v1/chat/completions" \
     }' | jq -r '.choices[0].message.content')
 
 # Print a formatted message with the output
-echo -e "\n=== Mistral Response ===\n"
-echo "$OUTPUT"
-echo -e "\n=======================\n"
+echo -e "\033[1;32m $OUTPUT \033[0m"
